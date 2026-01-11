@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -40,11 +41,23 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .nox/
+=======
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
+<<<<<<< HEAD
 *.cover
 *.py.cover
 .hypothesis/
@@ -205,3 +218,32 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+*,cover
+*.cover
+.hypothesis/
+.venv
+venv/
+ENV/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# База данных и секреты
+*.db
+*.sqlite
+.env
+.env.local
+.env.*.local
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+>>>>>>> 94612be (1)
