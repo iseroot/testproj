@@ -1,6 +1,21 @@
 from sqlmodel import create_engine
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
 import os
+
+# Выбираем файл окружения вручную, чтобы переключаться между local и docker.
+env_file = os.getenv("ENV_FILE")
+app_env = os.getenv("APP_ENV", "").lower()
+
+if not env_file:
+    if app_env == "docker":
+        env_file = ".env.docker"
+    elif app_env == "local":
+        env_file = ".env.local"
+    else:
+        env_file = ".env"
+
+load_dotenv(env_file)
 
 # 1. ПРАВИЛЬНЫЙ URL для psycopg3 (без "2" в конце!)
 DATABASE_URL = os.getenv(
